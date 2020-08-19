@@ -1,0 +1,7 @@
+.body {
+  display: flex;
+  flex: 0.9;
+  background-color: #121212;
+  position: relative;
+  z-index: -1;
+}

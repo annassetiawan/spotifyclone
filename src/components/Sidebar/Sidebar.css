@@ -6,7 +6,8 @@
   height: 100vh;
   color: white;
   background-color: #040404;
-  position: relative;
+  position: fixed;
+  z-index: 3;
 }
 
 .logo-icon {
@@ -33,6 +34,10 @@ div .link-container {
   height: 40px;
 }
 
+.link-container:hover, .link-container:focus{
+    color: #fff;
+}
+
 .menu-icon {
   color: #b3b3b3;
   margin-right: 20px;
@@ -46,6 +51,25 @@ div .link-container {
 .playlist-text{
     font-size: 12px;
     font-weight: bold;
-    padding: 30px 20px 26px;
+    padding: 30px 26px 20px 26px;
     color: #b3b3b3;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.divider{
+ 
+font-size: 14px;
+line-height: 20px;
+letter-spacing: .015em;
+color: #b3b3b3;
+cursor: default;
+background-color: #282828;
+border: none;
+height: 1px;
+width: 80%;
+position: relative;
+left: 10%;
+top: 10px;
 }

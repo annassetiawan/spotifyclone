@@ -1,6 +1,7 @@
 export const initialState = {
   user: null,
   playlists: [],
+  recentplay:null,
   spotify: null,
   discover_weekly: null,
   top_artists: null,
@@ -27,6 +28,11 @@ export const DataReducer = (state, action) => {
       return {
         ...state,
         playlists: action.playlists,
+      };
+    case "GET_RECENTPLAY":
+      return {
+        ...state,
+        recentplay: action.recentplay,
       };
 
     default:

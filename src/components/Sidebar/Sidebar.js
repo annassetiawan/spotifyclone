@@ -41,7 +41,7 @@ function Sidebar() {
         <span className="menu-text">Liked Songs</span>
       </a>
 
-      <hr class="divider"></hr>
+      <hr className="divider"></hr>
 
       <Playlist/>
     </div>

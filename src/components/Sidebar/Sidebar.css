@@ -3,7 +3,7 @@
   flex-direction: column;
   flex: 0.1;
   min-width: 230px;
-  height: 100vh;
+  height: 87%;
   color: white;
   background-color: #040404;
   position: fixed;
@@ -21,6 +21,7 @@
 .menu-container {
   list-style: none;
   padding: 0;
+  box-sizing: border-box;
 }
 
 div .link-container {
@@ -49,7 +50,7 @@ div .link-container {
 }
 
 .playlist-text{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     padding: 30px 26px 20px 26px;
     color: #b3b3b3;

@@ -10,7 +10,7 @@ const spotify = new SpotifyWebApi();
 
 function Auth() {
   const {state,dispatch} = useContext(DataContext);
-  const { token,user,playlists} = state
+  const { token,user,playlists,recentplay} = state
 
   useEffect(() => {
     const hash = getTokenFromResponse();
@@ -38,11 +38,18 @@ function Auth() {
           playlists: response,
         });
       })
+      spotify.getPlaylist().then((response) =>{
+        dispatch({
+          type: "GET_RECENTPLAY",
+          recentplay: response,
+        });
+      })
     }
   },[state,dispatch]);
 
   console.log('user', user);
   console.log('playlists', playlists);
+  console.log('recentplay', recentplay);
 
   console.log('token',token);
 

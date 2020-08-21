@@ -9,7 +9,7 @@ function Playlist() {
 
     const listPlaylist = playlists?.items?.map(playlist =>{
 
-       return <span>{playlist.name}</span>
+       return <span key={playlist.id}>{playlist.name}</span>
     })
     return (
         <div className='playlist'>

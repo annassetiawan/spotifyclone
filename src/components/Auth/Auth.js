@@ -10,7 +10,7 @@ const spotify = new SpotifyWebApi();
 
 function Auth() {
   const {state,dispatch} = useContext(DataContext);
-  const { token,user,playlists,recentplay} = state
+  const { token,user,playlists,featured} = state
 
   useEffect(() => {
     const hash = getTokenFromResponse();
@@ -38,10 +38,10 @@ function Auth() {
           playlists: response,
         });
       })
-      spotify.getPlaylist().then((response) =>{
+      spotify.getFeaturedPlaylists({limit:6,country:"ID",locale:"id_ID"}).then((response) =>{
         dispatch({
-          type: "GET_RECENTPLAY",
-          recentplay: response,
+          type: "GET_FEATURED",
+          featured: response,
         });
       })
     }
@@ -49,7 +49,7 @@ function Auth() {
 
   console.log('user', user);
   console.log('playlists', playlists);
-  console.log('recentplay', recentplay);
+  console.log('featured', featured);
 
   console.log('token',token);
 

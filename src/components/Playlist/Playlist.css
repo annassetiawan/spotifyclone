@@ -25,6 +25,7 @@
 
 .playlist::-webkit-scrollbar{
     width: 13px;
+    height: 5px;
   }
   
   .playlist::-webkit-scrollbar-track{

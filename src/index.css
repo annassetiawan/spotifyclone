@@ -1,4 +1,7 @@
-
+html{
+  height: 100vh;
+  overflow: hidden;
+}
 
 body {
   margin: 0;
@@ -7,6 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
 
 

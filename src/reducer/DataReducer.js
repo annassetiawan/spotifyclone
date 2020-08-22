@@ -1,12 +1,13 @@
 export const initialState = {
   user: null,
   playlists: [],
-  recentplay:null,
+  featured:null,
   spotify: null,
   discover_weekly: null,
   top_artists: null,
   playing: false,
   item: null,
+  featuredMessage:null,
   // token:'BQDqC5QA-dRc0C6NH7zV9epfgiDgIoIra7LLb89u4_9tuUItM_nlTRCKFw9eKnE5x9ArLVsvVQrxRgenw8vR9EGk1iW0NzfnoV3A-XQls-HE4YzJO-4N7UFft_wpQJh1GyTu2jTwe5xB2rQ89lPMrFmmoqyRCKfo'
 };
 
@@ -29,10 +30,11 @@ export const DataReducer = (state, action) => {
         ...state,
         playlists: action.playlists,
       };
-    case "GET_RECENTPLAY":
+    case "GET_FEATURED":
       return {
         ...state,
-        recentplay: action.recentplay,
+        featured: action.featured.playlists,
+        featuredMessage:action.featured.message,
       };
 
     default:

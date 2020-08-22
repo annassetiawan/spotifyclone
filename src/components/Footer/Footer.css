@@ -1,6 +1,22 @@
 .footer{
+    grid-area: footer;
     background-color: #282828;
     z-index: 4;
-    grid-area: footer;
-    bottom: -1500px;
+    position: relative;
+    display: grid;
+    grid-template-rows:100%;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "footer-left footer-center footer-right";
+    padding: 0 16px;
+}
+
+.footer-left{
+    grid-area: footer-left;
+}
+.footer-center{
+    grid-area: footer-center;
+}
+.footer-right{
+    grid-area: footer-right;
 }

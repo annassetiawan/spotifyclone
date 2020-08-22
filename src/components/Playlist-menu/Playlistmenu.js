@@ -12,7 +12,7 @@ function Playlistmenu() {
         <div className="playlist-content">
           <img className="playlist-poster" src={e.images[0].url} alt="test" />
           <div className="description">
-            <span key={e.id}>{e.name}</span>
+            <span key={e.id}>{e.name.length > 15 ? e.name.slice(0,12)+'...':e.name}</span>
             <p>{e.description}</p>
           </div>
         </div>

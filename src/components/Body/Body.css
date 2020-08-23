@@ -9,74 +9,16 @@
   overflow: auto;
   
 }
-.content{
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-justify-items: center;
-gap: 20px;
-}
 
-.playlist-container{
-  box-sizing: border-box;
-  width: 165px;
-  height: 243px;
-  background-color: #272727;
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 10px;
-  position: relative;
-}
-
-.playlist-content{
-  height: 203px;
-    overflow: hidden;
-}
-
-.playlist-poster{
-  position: relative;
- margin-bottom: 10px;
-}
-.description > span{
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.description > p{
-  font-size: 11px;
-  color: #b3b3b3;
-  margin-top:10px;
-}
-
-.content-title{
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
-.content-title > span{
-  color: #b3b3b3;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.content-message{
-  color: #b3b3b3;
-  font-size: 14px;
-  padding: 10px 0;
-}
 
 .body::-webkit-scrollbar{
   width: 13px;
-  height: 5px;
+
 }
 
 .body::-webkit-scrollbar-track{
   
-  background: #040404
+  background: #121212
 }
 
 .body::-webkit-scrollbar-thumb{

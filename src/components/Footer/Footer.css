@@ -29,6 +29,13 @@
     margin-left: 10px;
 }
 
+.now-playing > span {
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    width: 100px; 
+    overflow: hidden;
+}
+
 .now-playing >span:nth-child(1){
     color: #fff;
     font-weight: 600;

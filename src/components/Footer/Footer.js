@@ -30,8 +30,8 @@ function Footer() {
       const classes = useStyles();
       
       const {state} = useContext(DataContext)
-      const {recentplay} = state
-      console.log(recentplay?.items[0]?.track?.album?.images[2].url);
+      const {currentplay} = state
+      
   return (
     <div className="footer">
       <div className="footer-right">
@@ -66,10 +66,10 @@ function Footer() {
         </div>
       </div>
       <div className="footer-left">
-        <img src={recentplay?.items[0]?.track?.album?.images[2].url} alt="music" />
+        <img onError={musicdefault} src={currentplay?.item?.album?.images[2].url} alt="music" />
         <div className="now-playing">
-          <span>{recentplay?.items[0]?.track?.artists[0]?.name} </span>
-          <span>{recentplay?.items[0]?.track?.name} </span>
+          <span>{currentplay?.item?.artists[0]?.name} </span>
+          <span>{currentplay?.item?.name} </span>
         </div>
         <FavoriteBorderOutlinedIcon
           className="addtofavourites"

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./Footer.css";
 import musicdefault from "../../assets/musicdefault.svg";
 import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
@@ -12,6 +12,7 @@ import connect from "../../assets/connecteddevices.svg";
 import volume from "../../assets/volume.svg";
 import Slider from '@material-ui/core/Slider';
 import { makeStyles } from '@material-ui/core/styles';
+import { DataContext } from "../../context/DataContext";
 
 function Footer() {
     const useStyles = makeStyles({
@@ -27,6 +28,10 @@ function Footer() {
         },
       });
       const classes = useStyles();
+      
+      const {state} = useContext(DataContext)
+      const {recentplay} = state
+      console.log(recentplay?.items[0]?.track?.album?.images[2].url);
   return (
     <div className="footer">
       <div className="footer-right">
@@ -61,10 +66,10 @@ function Footer() {
         </div>
       </div>
       <div className="footer-left">
-        <img src={musicdefault} alt="music" />
+        <img src={recentplay?.items[0]?.track?.album?.images[2].url} alt="music" />
         <div className="now-playing">
-          <span>Powfu</span>
-          <span>Deathbed</span>
+          <span>{recentplay?.items[0]?.track?.artists[0]?.name} </span>
+          <span>{recentplay?.items[0]?.track?.name} </span>
         </div>
         <FavoriteBorderOutlinedIcon
           className="addtofavourites"

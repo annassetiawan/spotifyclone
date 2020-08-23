@@ -13,10 +13,87 @@
 
 .footer-left{
     grid-area: footer-left;
+  justify-content: flex-start;
+  align-items: center;
+
+  display: flex;
 }
+
+.footer-left > img{
+    width: 60px;
+}
+
+.now-playing{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.now-playing >span:nth-child(1){
+    color: #fff;
+    font-weight: 600;
+}
+.now-playing >span:nth-child(2){
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
 .footer-center{
     grid-area: footer-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .footer-right{
     grid-area: footer-right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.addtofavourites{
+    color: #b3b3b3;
+    margin-left: 20px;
+}
+
+.wrapper{
+    width: 32px;
+    height: 32px;
+    margin: 0 15px;
+    
+    display: flex;
+    justify-content: center;
+}
+.wrapper-right{
+    width: 32px;
+    height: 32px;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.play{
+    width: 32px;
+}
+
+.shuffle{
+    width: 20px;
+}
+.repeat{
+    width: 20px;
+}
+.next{
+    width: 20px;
+}
+.prev{
+    width: 20px;
+}
+.playlist-icon{
+    width: 24px;
+}
+.connect{
+    width: 24px;
+}
+.volume{
+    width: 24px;
 }
